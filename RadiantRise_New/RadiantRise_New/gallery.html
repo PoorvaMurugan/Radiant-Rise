@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | RadiantRise Lifespaces</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-wrapper">
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="RadiantRise Logo" class="logo-image">
+                </a>
+            </div>
+
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="nav-menu">
+
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="properties-plot.html">Plots</a></li>
+                        <li><a href="properties-villa.html">Villas</a></li>
+                        <li><a href="properties-apartment.html">Apartments</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-right">
+                    <button class="customer-portal-btn">Enquiry</button>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- Sub Hero -->
+    <section class="sub-hero">
+        <img src="assets/images/banner.jpg" class="hero-bg">
+
+        
+    </section>
+
+
+    <!-- Gallery Section -->
+    <section class="about-page-section">
+
+        <div class="container">
+
+            <h2 class="section-title">Project Gallery</h2>
+
+            <div class="gallery-page-grid">
+
+
+                <!-- Image 1 -->
+                <div class="gallery-card">
+                    <img src="assets/images/gallery1.jpg" alt="Project Image 1">
+                </div>
+
+                <!-- Image 2 -->
+                <div class="gallery-card">
+                    <img src="assets/images/gallery2.jpg" alt="Project Image 2">
+                </div>
+
+                <!-- Image 3 -->
+                <div class="gallery-card">
+                    <img src="assets/images/gallery3.jpg" alt="Project Image 3">
+                </div>
+
+                <!-- Image 4 -->
+                <div class="gallery-card">
+                    <img src="assets/images/gallery4.jpg" alt="Project Image 4">
+                </div>
+
+                <!-- Image 5 -->
+                <div class="gallery-card">
+                    <img src="assets/images/gallery5.jpg" alt="Project Image 5">
+                </div>
+
+                <!-- Image 6 -->
+                <div class="gallery-card">
+                    <img src="assets/images/gallery6.jpg" alt="Project Image 6">
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Lightbox -->
+    <div id="galleryLightbox" class="lightbox-modal">
+
+        <span class="close-lightbox">&times;</span>
+
+        <img class="lightbox-content" id="galleryLightboxImg">
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="container footer-container">
+
+            <div class="footer-left">
+
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png"
+                            alt="RadiantRise Logo"
+                            class="logo-image footer-logo-image">
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="footer-center">
+
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="nri.html">NRI</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="privacy-policy.html">Privacy and policy</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-right">
+
+                <div class="consult-box">
+
+                    <div class="consult-content">
+
+                        <p class="address-text">
+                            <strong>Address & Communication</strong><br>
+                            No.75/A, Janakpuri First Street, <br>
+                            Velachery, Chennai, <br>
+                            TamilNadu - 600042
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-contact-info">
+
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Script -->
+    <script src="script.js"></script>
+
+    <script>
+
+        /* Gallery Lightbox */
+
+        const galleryImages = document.querySelectorAll('.gallery-card img');
+        const lightbox = document.getElementById('galleryLightbox');
+        const lightboxImg = document.getElementById('galleryLightboxImg');
+        const closeBtn = document.querySelector('.close-lightbox');
+
+
+        galleryImages.forEach(img => {
+
+            img.addEventListener('click', () => {
+
+                lightbox.style.display = "block";
+                lightboxImg.src = img.src;
+
+            });
+
+        });
+
+
+        closeBtn.addEventListener('click', () => {
+
+            lightbox.style.display = "none";
+
+        });
+
+
+        lightbox.addEventListener('click', (e) => {
+
+            if (e.target === lightbox) {
+                lightbox.style.display = "none";
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

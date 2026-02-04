@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadiantRise Lifespaces</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <!-- Replaced Icon with Image Logo -->
+                <img src="assets/images/logo.png" alt="RadiantRise Logo" class="logo-image">
+            </div>
+
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="nav-menu">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="properties-plot.html">Plots</a></li>
+                        <li><a href="properties-villa.html">Villas</a></li>
+                        <li><a href="properties-apartment.html">Apartments</a></li>
+                        <li><a href="nri.html">NRI</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-right">
+                    <button class="customer-portal-btn">Enquiry</button>
+                    <!--<div class="login-options">
+                          <a href="#">Login / Signup</a>
+                        <i class="fa-solid fa-angle-up"></i>
+                        <br>
+                        <span>Call us</span> 
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- User provided banner -->
+        <img src="assets/images/banner.jpg" alt="RadiantRise Banner" class="hero-bg">
+
+        <div class="container hero-content">
+            <h1 class="hero-headline">
+                Where <strong>modern</strong><br>
+                living meets<br>
+                natural<br>
+                surroundings
+            </h1>
+        </div>
+
+        <div class="hero-enquiry-form-container">
+            <form class="hero-enquiry-form">
+                <div class="form-header">
+                    <h2>Get the Best Price</h2>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="mobile" name="mobile" placeholder="Mobile" required>
+                </div>
+                <button type="submit" class="submit-btn">Submit Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container about-container">
+            <div class="about-content animate-on-scroll slide-left">
+                <div class="about-text-box">
+                    <h2>Find premium properties across TamilNadu with great locations and strong growth potential.</h2>
+                    <p>RadiantRise Lifespaces Private Limited offers trusted expertise in residential developments,
+                        focusing on premium layouts, villas, and apartments. Backed by over 20 years of dedicated
+                        industry experience, RadiantRise is committed to quality, transparency, and innovation.</p>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="20">0+</span>
+                        <span class="stat-label">Years</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="120">0+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-image animate-on-scroll slide-right">
+                <img src="assets/images/rightside.png" alt="Premium Property Model">
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-nav">
+                <!-- Current Projects Dropdown -->
+                <div class="project-dropdown-wrapper">
+                    <button class="dropdown-btn active">Current projects</button>
+                    <div class="dropdown-content">
+                        <div class="project-list-item">Omr</div>
+                        <div class="project-list-item">Pallavaram</div>
+                        <div class="project-list-item">Chrompet</div>
+                        <div class="project-list-item">Tambaram</div>
+                    </div>
+                </div>
+
+                <!-- Finished Projects Dropdown -->
+                <div class="project-dropdown-wrapper">
+                    <button class="dropdown-btn">Finished projects</button>
+                    <div class="dropdown-content">
+                        <div class="project-list-item">Site A</div>
+                        <div class="project-list-item">Site B</div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Projects Dropdown -->
+                <div class="project-dropdown-wrapper">
+                    <button class="dropdown-btn">Upcoming projects</button>
+                    <div class="dropdown-content">
+                        <div class="project-list-item">New Launch X</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-header">
+        <div class="container">
+            <h2>Testimonials</h2>
+        </div>
+    </section>
+
+    <section class="testimonials-body">
+        <div class="container testimonial-slider-container">
+            <div class="testimonial-track" id="testimonialTrack">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="assets/images/testimonial-1.png" alt="Ramesh Krishnan">
+                    </div>
+                    <div class="testimonial-content">
+                        <h3>Ramesh Krishnan</h3>
+                        <span>IT Professional</span>
+                        <p>Find premium properties across TamilNadu with great locations and strong growth potential.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="assets/images/testimonial-2.png" alt="Meenakshi Sundaram">
+                    </div>
+                    <div class="testimonial-content">
+                        <h3>Meenakshi Sundaram</h3>
+                        <span>Entrepreneur</span>
+                        <p>Excellent service and transparent dealings. Highly recommended for property investments.</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="assets/images/testimonial-3.png" alt="Vijay Raghavan">
+                    </div>
+                    <div class="testimonial-content">
+                        <h3>Vijay Raghavan</h3>
+                        <span>Senior Architect</span>
+                        <p>RadiantRise helped us find our dream home within our budget. Truly professional team.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination Dots (Optional but good) -->
+            <div class="testimonial-dots" id="testimonialDots"></div>
+        </div>
+    </section>
+
+    <!-- Gallery & Map Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item skyscraper animate-on-scroll slide-left">
+                    <img src="assets/images/contact-left.jpg" alt="Building Showcase">
+                </div>
+                <div class="gallery-item map-view animate-on-scroll slide-right">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.7257949383306!2d80.22004!3d12.989382!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52670040f27d45%3A0x123b522f96be5485!2sRADIANTRISE%20LIFESPACES%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1767457956833!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-left">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="RadiantRise Logo" class="logo-image footer-logo-image">
+                </div>
+            </div>
+
+            <div class="footer-center">
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="nri.html">NRI</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="privacy-policy.html">Privacy and policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-right">
+                <div class="consult-box">
+                    <!--                                 <h3>Contact us</h3>
+         -->
+                    <div class="consult-content">
+                        <p class="address-text">
+                            <strong>Address & Communication</strong><br>
+                            No.75/A, Janakpuri First Street, <br>Velachery,Chennai, <br>
+                            TamilNadu - 600042
+                        </p>
+                    </div>
+                    <!--  <button class="enquire-btn">enquire now</button>-->
+                </div>
+
+                <div class="footer-contact-info">
+                    <!--                     <div class="toll-free">
+                        TOLL FREE 1800 1800 1800
+                    </div> -->
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
