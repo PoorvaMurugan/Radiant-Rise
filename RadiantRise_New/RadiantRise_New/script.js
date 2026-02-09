@@ -39,17 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const moveToSlide = (index) => {
             // Need to handle infinite loop properly or just rewind
             // For simple rewind:
-            if (index >= slides.length - 1) { // -1 because showing 2 items? 
-                // Logic depends on how many visible. 
-                // If Desktop (2 visible), slide up to length-2?
-                // If Mobile (1 visible), slide up to length-1.
-                // Let's check width.
-                const isMobile = window.innerWidth <= 768;
-                const maxIndex = isMobile ? slides.length - 1 : slides.length - 2;
-
-                if (index > maxIndex) {
-                    index = 0;
-                }
+            if (index >= slides.length) {
+                index = 0;
+            } else if (index < 0) {
+                index = slides.length - 1;
             }
 
             track.style.transform = `translateX(-${index * slideWidth}px)`;
@@ -210,21 +203,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.close-modal');
 
     if (modalOverlay) {
+        // Function to open modal by ID
+        const openBlogModal = (id) => {
+            const data = blogData[id];
+            if (data) {
+                document.getElementById('modalTitle').innerText = data.title;
+                document.getElementById('modalImg').src = data.image;
+                document.getElementById('modalText').innerHTML = data.content;
+
+                modalOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        };
+
         blogCards.forEach(card => {
             card.addEventListener('click', () => {
                 const id = card.getAttribute('data-id');
-                const data = blogData[id];
-
-                if (data) {
-                    document.getElementById('modalTitle').innerText = data.title;
-                    document.getElementById('modalImg').src = data.image;
-                    document.getElementById('modalText').innerHTML = data.content;
-
-                    modalOverlay.classList.add('active');
-                    document.body.style.overflow = 'hidden'; // Prevent background scroll
-                }
+                openBlogModal(id);
             });
         });
+
+        // Check for ?id=X in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const blogId = urlParams.get('id');
+        if (blogId) {
+            openBlogModal(blogId);
+        }
 
         const closeModal = () => {
             modalOverlay.classList.remove('active');
